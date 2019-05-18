@@ -2,37 +2,37 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 
-public class TillDisplayCalculatorTest {
+public class UserInputTest {
 
-    TillDisplayCalculator tillDisplayCalculator = new TillDisplayCalculator();
+    UserInput userInput = new UserInput();
 
     @Test
     public void shouldNotAcceptPriceFor4DecimalPlaces() {
         BigDecimal price = new BigDecimal("23.3434");
-        assert !tillDisplayCalculator.isPriceDecimalValid(price);
+        assert !userInput.isPriceDecimalValid(price);
     }
 
     @Test
     public void shouldAcceptPriceFor2DecimalPlaces() {
         BigDecimal price = new BigDecimal("23.33");
-        assert tillDisplayCalculator.isPriceDecimalValid(price);
+        assert userInput.isPriceDecimalValid(price);
     }
 
     @Test
     public void shouldNotAcceptPriceFor1DecimalPlaces() {
         BigDecimal price = new BigDecimal("23.3");
-        assert !tillDisplayCalculator.isPriceDecimalValid(price);
+        assert !userInput.isPriceDecimalValid(price);
     }
 
     @Test
     public void shouldAcceptValidStatusCode() {
         String statusCode = "blah blah";
-        assert !tillDisplayCalculator.isStateCodeValid(statusCode);
+        assert !userInput.isStateCodeValid(statusCode);
     }
 
     @Test
     public void shouldNotAcceptInvalidStateCode() {
         String statusCode = "AL";
-        assert tillDisplayCalculator.isStateCodeValid(statusCode);
+        assert userInput.isStateCodeValid(statusCode);
     }
 }
