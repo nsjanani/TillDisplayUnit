@@ -28,25 +28,14 @@ public class TillDisplayCalculator {
 
 
             BigDecimal price;
+            System.out.println("Price (in $ with exactly two decimal places as 32.00) : ");
             do {
-                System.out.println("Price (in $ with exactly two decimal places as 32.00) : ");
                 while(!scanner.hasNextBigDecimal()) {
                     String priceInput = scanner.next();
                     System.out.println("Sorry, invalid input ! Please enter a valid input in number with 2 decimal places");
                 }
                 price = scanner.nextBigDecimal();
-            } while(isPriceDecimalValid(price));
-
-
-            while(!scanner.hasNextBigDecimal()) {
-                String priceInput = scanner.next();
-                System.out.println("Sorry, invalid input ! Please enter a valid input in number with exactly 2 decimal places");
-            }
-            price = scanner.nextBigDecimal();
-            if(isPriceDecimalValid(price))
-                continue;
-            else
-                break;
+            } while(!isPriceDecimalValid(price));
         }
     }
 
@@ -54,7 +43,7 @@ public class TillDisplayCalculator {
        if(price.scale() == 2)
            return true;
        else {
-           System.out.println("Sorry, invalid input ! Please enter valid input with exactly 2 decimal places");
+           System.out.println("Sorry, invalid input ! Please make sure whether your input has exactly 2 decimal places");
            return false;
        }
     }
