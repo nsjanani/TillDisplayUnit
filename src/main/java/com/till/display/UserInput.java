@@ -13,6 +13,7 @@ public class UserInput {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Please enter the number of items (in number) : ");
+        System.out.println("----------------------------------------------------------------");
         int noOfItems;
         while (!scanner.hasNextInt()) {
             String itemNumberInput = scanner.next();
@@ -20,6 +21,7 @@ public class UserInput {
         }
         noOfItems = scanner.nextInt();
 
+        System.out.println("----------------------------------------------------------------");
         System.out.println("Please enter the item name and price (in $) for all the items : ");
         for (int i = 0; i < noOfItems; i++) {
 
@@ -39,11 +41,14 @@ public class UserInput {
             itemPriceMap.put(itemName, price);
         }
 
+        System.out.println("----------------------------------------------------------------");
         System.out.println("Please enter the state code (UT, NV, TX, AL, CA) : ");
         String stateCode = null;
         do {
             stateCode = scanner.next();
         } while (!isStateCodeValid(stateCode));
+
+        System.out.println("----------------------------------------------------------------");
 
         return itemPriceMap;
     }
@@ -66,4 +71,5 @@ public class UserInput {
         System.out.println("Sorry, invalid input ! Please make sure whether your input matches any in the given state code list");
         return false;
     }
+
 }
