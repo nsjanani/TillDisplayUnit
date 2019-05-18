@@ -1,3 +1,6 @@
+package com.till.display;
+
+import com.till.display.UserInput;
 import org.junit.Test;
 
 import java.math.BigDecimal;

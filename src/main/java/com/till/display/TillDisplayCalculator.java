@@ -1,7 +1,6 @@
-import java.math.BigDecimal;
-import java.util.HashMap;
+package com.till.display;
+
 import java.util.Map;
-import java.util.Scanner;
 
 public class TillDisplayCalculator {
 
