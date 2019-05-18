@@ -23,4 +23,16 @@ public class TillDisplayCalculatorTest {
         BigDecimal price = new BigDecimal("23.3");
         assert !tillDisplayCalculator.isPriceDecimalValid(price);
     }
+
+    @Test
+    public void shouldAcceptValidStatusCode() {
+        String statusCode = "blah blah";
+        assert !tillDisplayCalculator.isStateCodeValid(statusCode);
+    }
+
+    @Test
+    public void shouldNotAcceptInvalidStateCode() {
+        String statusCode = "AL";
+        assert tillDisplayCalculator.isStateCodeValid(statusCode);
+    }
 }
