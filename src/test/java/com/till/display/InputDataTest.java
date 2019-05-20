@@ -1,13 +1,12 @@
 package com.till.display;
 
-import com.till.display.UserInput;
 import org.junit.Test;
 
 import java.math.BigDecimal;
 
-public class UserInputTest {
+public class InputDataTest {
 
-    UserInput userInput = new UserInput();
+    InputData userInput = new InputData();
 
     @Test
     public void shouldNotAcceptPriceFor4DecimalPlaces() {

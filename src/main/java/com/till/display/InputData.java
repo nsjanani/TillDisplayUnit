@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class UserInput {
+public class InputData {
 
     private int noOfItems;
     private Map<String, BigDecimal> itemPriceMap;
@@ -84,8 +84,8 @@ public class UserInput {
     }
 
     public boolean isStateCodeValid(String stateCode) {
-        StateCode[] codes = StateCode.values();
-        for (StateCode code : codes) {
+        StateCodes[] codes = StateCodes.values();
+        for (StateCodes code : codes) {
             if (stateCode.equals(code.toString()))
                 return true;
         }
