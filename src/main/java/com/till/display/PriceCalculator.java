@@ -11,7 +11,7 @@ public class PriceCalculator {
         for(Map.Entry<String, BigDecimal> itemEntry : itemMap.entrySet()) {
             totalPrice = totalPrice.add(itemEntry.getValue());
         }
-        System.out.println("Your Payslip (in $)             ");
+        System.out.println("Your Total Payment (in $)                    ");
         System.out.println("---------------------------------------------");
         System.out.println("Total Price (in $ without tax): " + totalPrice);
         BigDecimal taxPrice = getStateTaxPrice(stateCode, totalPrice);
