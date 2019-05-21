@@ -9,8 +9,7 @@ public class TillDisplayUnit {
         inputData.getUserInput();
 
         PriceCalculator priceCalculator = new PriceCalculator();
-        System.out.println("Your Total Price (in $) is : ");
-        System.out.println("$ "+ priceCalculator.calculateTotalPrice(inputData.getItemPriceMap()));
+        priceCalculator.calculateTotalPrice(inputData.getItemPriceMap(), inputData.getStateCode());
     }
 
 }
